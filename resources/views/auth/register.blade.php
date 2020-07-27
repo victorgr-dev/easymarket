@@ -38,7 +38,8 @@
                                 @enderror
                             </div>
                         </div>
-
+                        
+                        @if(!$tenantName)
                         <div class="form-group row">
                             <label for="fqdn" class="col-md-4 col-form-label text-md-right">{{ __('Hostname') }}</label>
 
@@ -52,6 +53,7 @@
                                 @enderror
                             </div>
                         </div>
+                        @endif
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
