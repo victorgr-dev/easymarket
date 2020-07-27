@@ -51,7 +51,7 @@ class RegisterController extends Controller
     {
         //Obtiene el hostname actual
         $this->middleware('guest');
-        $hostname  = app(\Hyn\Tenancy\Environment::class)->hostname();//Consigue el hostname actual
+        $hostname  = app(\Hyn\Tenancy\Environment::class)->hostname();
         if ($hostname) {
             $fqdn = $hostname->fqdn;
             $this->tenantName = explode(".", $fqdn)[0];
